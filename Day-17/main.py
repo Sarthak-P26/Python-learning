@@ -12,5 +12,8 @@ for question in question_data:
 
 quiz = QuizBrain(question_bank)
 
-while quiz.still_has_question():
+while quiz.still_has_question():  # Added parentheses to call the method
     quiz.next_question()
+
+print("You have completed the quiz")
+print(f"Your final score is {quiz.score}/{len(question_bank)}")
